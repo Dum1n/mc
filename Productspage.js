@@ -1,19 +1,19 @@
 const product = [
     {
         id: 0,
-        image: 'image/PizzaChicken.png',
+        image: 'PizzaChicken.png',
         title: 'Pizza Chicken',
         price: 100,
     },
     {
         id: 1,
-        image: 'image/Pizza4cheese.png',
+        image: 'Pizza4cheese.png',
         title: 'Pizza 4cheese',
         price: 90,
     },
     {
         id: 2,
-        image: 'image/BlinelecuCiuperci.png',
+        image: 'BlinelecuCiuperci.png',
         title: 'Blinele cu ciuperci',
         price: 230,
     },
