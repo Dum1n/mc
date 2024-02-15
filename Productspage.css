@@ -59,7 +59,7 @@ body{
     margin-left: 5%
 }
   
-@media(max-width:800px){
+@media(max-width:890px){
     .header{
       top:0;
       left: 0;
@@ -69,7 +69,7 @@ body{
       justify-content: space-between;
       align-items: center;
       z-index: 10;
-      height: 12vh;
+      height: 7vh;
       box-shadow: none;
     }
 }
@@ -237,9 +237,50 @@ a{
   
 .fa-bars.active{
     color: black;
-    transition: 0.6s;
 }
   
+.header .logo img{
+    width: 11vh;
+    height: 11vh;
+  }
+  
+  @media (max-width:890px){
+    .header .logo img{
+      width: 7.5vh;
+      height: 7.5vh;
+    }
+  }
+
+@media (min-width:450px){
+    .header .logo{
+      display: flex;
+      color: white;
+      width: 300px;
+      justify-content: center;
+      align-items: center;
+      margin-left: 3%;
+      font-size: 30px;
+    }
+  }
+  
+  @media (max-width:450px){
+    .header .logo{
+      display: flex;
+      color: white;
+      width: 300px;
+      justify-content: center;
+      align-items: center;
+      margin-left: -40px;
+      font-size: 25px;
+    }
+  
+    .header .logo img{
+      width: 8vh;
+      height: 8vh;
+    }
+  
+  }
+
 @media (max-width:890px){
     .bars{
       position: absolute;
@@ -264,33 +305,37 @@ a{
     }
   
     .header.open .navbar{
-      top: 11vh;
+      top: 7vh;
       opacity: 1;
       visibility: visible;
       left: 0;
       display: flex;
+      align-items: center;
+       flex-direction: column;
       flex-direction: column;
       background-color: rgb(0, 0, 0);
       width: 100%;
-      height: 29vh;
-      padding: 20px;
+      height: 290px;
+      padding: 0px;
       font-size: 15px;
-      /*transition: 0.6s;*/
+      transition: 0.6s;
     }
   
     .header.open.active .navbar{
-      top: 11vh;
+      top: 7vh;
       opacity: 1;
       visibility: visible;
       left: 0;
       display: flex;
+      align-items: center;
+      flex-direction: column;
       flex-direction: column;
       background-color: rgb(255, 255, 255);
       width: 100%;
-      height: 230px;
-      padding: 20px;
+      height: 290px;
+      padding: 0px;
       font-size: 15px;
-      /*transition: 0.5s;*/
+      transition: 0.5s;
     }
     .header.open .navbar a{
       font-size: 1.25em;
@@ -415,7 +460,19 @@ a{
     margin-top: 8vh;
     margin-bottom: 10px;
     flex-direction: column;
-    
+    transition: 0.6s;
+}
+
+@media(max-width:890px){
+    .container1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 4vh;
+        margin-bottom: 10px;
+        flex-direction: column;   
+        transition: 0.6s; 
+    }
 }
 
 .fa-circle {
@@ -477,7 +534,6 @@ input {
 .data{
     width: 100%;
     border-radius: 3px;
-    height: auto;
     /*overflow-y: auto;*/
     margin-bottom: 100px;
     height: min(50vh);
