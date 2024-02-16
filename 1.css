@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
     font-family: 'Poppins';
+    box-sizing: border-box;
   }
   
   
@@ -16,7 +17,7 @@
     font-family: 'Poppins';
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    height: auto;
   }
   
   .header .logo{
@@ -58,21 +59,16 @@
     margin-left: 5%
   }
   
-  @media(max-width:800px){
+  @media(max-width:890px){
     .header{
       top:0;
-      left: 0;
+     left: 0;
       width: 100%;
-      /*background-color: rgb(123, 123, 230);*/
-      background-color: rgba(0, 0, 0, 0.2);
+      height: 7vh;
       position: fixed;
-      /*padding: 20px ;*/
       display: flex;
       justify-content: space-between;
       align-items: center;
-      z-index: 10;
-      height: min(100px);
-      /*color: #eee;*/
       box-shadow: none;
     }
   }
@@ -226,8 +222,8 @@
     margin-right: 10%;
     z-index: 10;
     padding: 5px;
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     justify-content: center;
   }
   
@@ -244,8 +240,44 @@
     color: black;
     transition: 0.6s;
   }
+
+  .header .logo img{
+    width: 11vh;
+    height: 11vh;
+  }
   
-  @media (max-width:800px){
+  @media (max-width:890px){
+    .header .logo img{
+      width: 7.5vh;
+      height: 7.5vh;
+    }
+  }
+
+  @media (min-width:550px){
+    .header .logo{
+      display: flex;
+      color: white;
+      width: 300px;
+      justify-content: center;
+      align-items: center;
+      margin-left: 3%;
+      font-size: 30px;
+    }
+  }
+  
+  @media (max-width:450px){
+    .header .logo{
+      display: flex;
+      color: white;
+      width: 300px;
+      justify-content: center;
+      align-items: center;
+      margin-left: -40px;
+      font-size: 25px;
+    }
+  }
+
+  @media (max-width:890px){
     .bars{
       position: absolute;
       display: flex;
@@ -269,22 +301,24 @@
     }
   
     .header.open .navbar{
-      top: 100px;
+      top: 7vh;
       opacity: 1;
       visibility: visible;
       left: 0;
       display: flex;
+      justify-self: center;
+      align-items: center;
       flex-direction: column;
-      background-color: rgba(0, 0, 0, 0.2);
+      background-color: rgb(0, 0, 0);
       width: 100%;
-      height: 230px;
-      padding: 20px;
+      height: 290px;
+      padding: 0px;
       font-size: 15px;
-      /*transition: 0.6s;*/
+      transition: 0.6s;
     }
   
     .header.open.active .navbar{
-      top: 100px;
+      top: 7vh;
       opacity: 1;
       visibility: visible;
       left: 0;
@@ -292,12 +326,12 @@
       flex-direction: column;
       background-color: rgb(255, 255, 255);
       width: 100%;
-      height: 230px;
-      padding: 20px;
+      height: 290px;
+      padding: 0px;
       font-size: 15px;
-      /*transition: 0.5s;*/
+      transition: 0.5s;
     }
-    .header.open .navbar a{
+    /*.header.open .navbar a{
       font-size: 1.25em;
       width: 127;
     }
@@ -307,8 +341,8 @@
     }
     .header.open .navbar a:nth-child(2){
       font-size: 1.25em;
-      width: 97px;
-    }
+      width: 197px;
+    }*/
     
   }
 
@@ -392,11 +426,11 @@
   .containerp{
     width: 90;
     padding: 20px;
-    height: 83vh;
+    height: 88vh;
     background-color: rgb(231, 231, 231);
     display: flex;
-    /*grid-template-columns: repeat(auto-fit, minmax(385px, 1fr));*/
     margin-top: 12vh;
+    transition: 0.6s;
 }
 
 .image{
@@ -421,7 +455,10 @@
 
 .text{
     background-color: rgb(255, 255, 255);   
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*align-items: center;*/
     padding: 20px;
     height: auto;
     float: left;
@@ -429,12 +466,25 @@
     border-radius: 0 20px 20px 0;
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
     width: 100%;
+
 }
 
-@media(max-width:810px){
+.topic{
+  padding: 2vh;
+  font-size: 22px;
+}
+
+.description{
+  padding: 5vh;
+  font-size: 25px;
+
+}
+
+@media(max-width:890px){
   .text{
     border-radius: 0 0 20px 20px;
     padding: 50px;
+    height: fit-content;
   }
   .image{
     border-radius: 20px 20px 0 0;
@@ -449,9 +499,21 @@
     align-items: center;
     display: flex;
   }
+  .text h3{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
   .containerp{
-    padding: 0;
-    padding-top: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(405px, 1fr));
+    margin-top: 7vh;
+    flex-direction: column;
+    height: auto;
+    transition: 0.6s;
+  }
+  .description {
+    display: flex;
+    justify-self: center;
+    align-items: center ;
+    flex-direction: column;
   }
 }
