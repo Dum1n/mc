@@ -1,126 +1,126 @@
 const product = [
     {
         id: 0,
-        image: 'PizzaChicken.png',
+        image: 'image/PizzaChicken.png',
         title: 'Pizza Chicken',
         price: 100,
         gramaj: 500 + ' g',
     },
     {
         id: 1,
-        image: 'Pizza4cheese.png',
+        image: 'image/Pizza4cheese.png',
         title: 'Pizza 4cheese',
         price: 90,
         gramaj: 500 + ' g',
     },
     {
         id: 2,
-        image: 'PizzaCarbonara.png',
+        image: 'image/PizzaCarbonara.png',
         title: 'Pizza Carbonara',
         price: 100,
         gramaj: 500 + ' g',
     },
     {
         id: 3,
-        image: 'PizzaAsortDeCarne.png',
+        image: 'image/PizzaAsortDeCarne.png',
         title: 'Pizza Asort De Carne',
         price: 100,
         gramaj: 500 + ' g',
     },
     {
         id: 4,
-        image: 'PizzaCapricioasa.png',
+        image: 'image/PizzaCapricioasa.png',
         title: 'Pizza Capricioasa',
         price: 95,
         gramaj: 500 + ' g', 
     },
     {
         id: 5,
-        image: 'BlineleMarPui.png',
+        image: 'image/BlineleMarPui.png',
         title: 'Blinele Măr-Pui',
         price: 70,
         gramaj: 300 + ' g',
     },
     {
         id: 6,
-        image: 'BlinelePuiAnanas.png',
+        image: 'image/BlinelePuiAnanas.png',
         title: 'Blinele Pui-Ananas',
         price: 75,
         gramaj: 310 + ' g',
     },
     {
         id: 7,
-        image: 'BlinelePuiCiuperci.png',
+        image: 'image/BlinelePuiCiuperci.png',
         title: 'Blinele Pui-Ciuperci',
         price: 75,
         gramaj: 310 + ' g',
     },
     {
         id: 8,
-        image: 'BlineleCuSomon.png',
+        image: 'image/BlineleCuSomon.png',
         title: 'Blinele Cu Somon',
         price: 110,
         gramaj: 280 + ' g',
     },
     {
         id: 9,
-        image: 'BlineleȘuncăRoșii.png',
+        image: 'image/BlineleȘuncăRoșii.png',
         title: 'Blinele Șuncă-Roșii',
         price: 75,
         gramaj: 300 + ' g',
     },
     {
         id: 10,
-        image: 'BlineleBaconParmezan.png',
+        image: 'image/BlineleBaconParmezan.png',
         title: 'Blinele Bacon Parmezan',
         price: 75,
         gramaj: 285 + ' g',
     },
     {
         id: 11,
-        image: 'BlineleBrânzăVerdeață.png',
+        image: 'image/BlineleBrânzăVerdeață.png',
         title: 'Blinele Brânză Verdeață',
         price: 55,
         gramaj: 210 + ' g',
     },
     {
         id: 12,
-        image: 'BlineleNutellaBanana.png',
+        image: 'image/BlineleNutellaBanana.png',
         title: 'Blinele Nutella-Banana',
         price: 65,
         gramaj: 250 + ' g',
     },
     {
         id: 13,
-        image: 'BlineleVișine.png',
+        image: 'image/BlineleVișine.png',
         title: 'Blinele Vișine',
         price: 55,
         gramaj: 250 + ' g',
     },
     {
         id: 14,
-        image: 'BlineleFrișcăPortocale.png',
+        image: 'image/BlineleFrișcăPortocale.png',
         title: 'Blinele Frișcă-Portocale',
         price: 55,
         gramaj: 250 + ' g',
     },
     {
         id: 15,
-        image: 'Set2.png',
+        image: 'image/Set2.png',
         title: 'Sushi Set 2',
         price: 310,
         gramaj: 30 + ' buc',
     },
     {
         id: 16,
-        image: 'SetHinata.png',
+        image: 'image/SetHinata.png',
         title: 'Sushi Set Hinata',
         price: 365,
         gramaj: 38 + ' buc',
     },
     {
         id: 17,
-        image: 'Placinta.png',
+        image: 'image/Placinta.png',
         title: 'Plăcintă',
         price: 20,
         gramaj: 120 + ' g',
@@ -262,17 +262,14 @@ function headerscrolled(){
     var scrollValue = window.scrollY;
     var searchsis = document.querySelector('.searchsis');
     var but = document.querySelector('.buttons');
-    let sidebar = document.querySelector('.sidebar');
     console.log(scrollValue)
 
-    if(scrollValue > 100){
+    if(scrollValue > 75){
         searchsis.classList.add('open');
         but.classList.add('open');
-        sidebar.classList.add('open');
     } else{
         searchsis.classList.remove('open');
         but.classList.remove('open');
-        sidebar.classList.remove('open');
     }
 }
 
