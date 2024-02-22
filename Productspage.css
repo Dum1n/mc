@@ -1158,6 +1158,9 @@ button:hover{
         margin-top: 10vh;
         z-index: 110;
     }
+    .row.open{
+            margin-top: 2vh;
+        }
 }
 @media(max-width:500px){
     .searchsis.open{
