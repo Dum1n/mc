@@ -41,7 +41,7 @@ function slidePrev(){
 
 
 function autoSliding(){
-    deletInterval = setInterval(timer, 2000);
+    deletInterval = setInterval(timer, 3000);
     function timer(){
         slideNext();
         indicators();
@@ -117,18 +117,18 @@ searchbtn.onclick = function(){
 /*pop up*/ 
 
 const popup = document.querySelector('.popup');
-const x = document.querySelector('.popup-content h1');
+const closeButton = document.querySelector('.popup-content h1'); 
+
+function showPopup() {
+    popup.classList.add('showpopup');
+}
 
 window.addEventListener('load', () => {
-    popup.classList.add('showpopup');
-    popup.childNodes[1].classList.add('showpopup');
-})
-
-x.addEventListener('click', () => {
-    popup.classList.remove('showpopup');
-    popup.childNodes[1].classList.remove('showpopup');
-})
-
+    if(localStorage.getItem('popupShown') !== 'true'){
+        showPopup();
+        localStorage.setItem('popupShown', 'true');
+    }
+});
 /*Header scrolled*/
 function headerscrolled(){
     var scrollValue = window.scrollY;
@@ -150,4 +150,16 @@ function headerscrolled(){
 
 window.addEventListener('scroll', headerscrolled);
 
+/*scroll anumation*/
+const observer = new IntersectionObserver((entries) => { entries.forEach((entry) => {
+    console.log(entry)
+    if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+    } else {
+        entry.target.classList.remove('show');
+    }
+    });
+});
 
+const elementeas = document.querySelectorAll('.hidden'); 
+elementeas.forEach((el) => observer.observe(el));
